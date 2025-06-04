@@ -3,7 +3,7 @@ import { HomePage } from '../pages/Homepage'
 //import { RegistrationPage } from '../pages/REgistrationpage'
 //import { RandomDataUtil } from '../utilities/randomDataGenerators'
 import { TestConfig } from '../test.config'
-import { LoginPage } from '../pages/Loginpage'
+import { LoginPage } from '../pages/LoginPage'
 import { MyAccountPage } from '../pages/MyAccountPage'
 
 

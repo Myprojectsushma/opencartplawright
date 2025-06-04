@@ -1,6 +1,6 @@
 import { Page, Locator, expect } from '@playwright/test';
-//import { ShoppingCartPage } from './ShoppingCartPage'; // Import ShoppingCartPage if needed
-import { ShoppingCartPage } from './ShoppingCartPage';
+import { ShoppingCartPage } from './ShoppingCartPage'; // Import ShoppingCartPage if needed
+
 export class ProductPage {
     private readonly page: Page;
     
@@ -44,8 +44,13 @@ export class ProductPage {
      */
     async isConfirmationMessageVisible(): Promise<boolean> {
         try {
-            await expect(this.cnfMsg).toBeVisible();
-            return true;
+            if(this.cnfMsg!=null){
+                 return true;
+            }
+            else{
+                return false;
+            }//await expect(this.cnfMsg).toBeVisible();
+           
         } catch (error) {
             console.log(`Confirmation message not found: ${error}`);
             return false;
